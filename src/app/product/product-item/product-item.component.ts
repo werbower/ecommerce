@@ -15,6 +15,12 @@ export class ProductItemComponent implements OnInit {
   ngOnInit() {
     this.product = new Product('product', 100, 'image');
   }
-  a
+  addQuantity(event) {
+    this.product.quantity++;
+  }
+
+  subQuantity(event) {
+    this.product.quantity--;
+  }
 
 }

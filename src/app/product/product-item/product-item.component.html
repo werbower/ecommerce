@@ -1,4 +1,6 @@
 <div class="product-container">
   {{product.name+' price '+product.price }}
-  <button (click)="addQuantity($event)">Add</button>
+  <div>quantity {{product.quantity}}</div>
+  <button (click)="addQuantity($event)" *ngIf="product.quantity<10">Add</button>
+  <button (click)="subQuantity($event)" *ngIf="product.quantity>0">Sub</button>
 </div>
